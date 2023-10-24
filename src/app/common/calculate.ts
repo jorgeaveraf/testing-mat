@@ -51,8 +51,6 @@ export class CalculateComponent {
         return this.round(this.beta0(arr1, arr2) + this.beta1(arr1, arr2) * xk);
       }
 
-
-
     round(value: number): number {
         return Math.round(value * 100) / 100; 
       }
