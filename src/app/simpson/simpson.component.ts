@@ -12,9 +12,34 @@ let num_segment = 8;
 })
 export class SimpsonComponent {
   constructor() {
-    let simpson = new simpsonRule();
-    let x = simpson.x(x0, x1, num_segment);
-    let fx = simpson.fx1(x);
-    let result = simpson.simpson(x, fx);
+    let x = simpsonRule.x(x0, x1, num_segment);
+    let fx = simpsonRule.fx1(x);
+    let result = simpsonRule.simpson(x, fx);
+  }
+
+  
+
+  calcular(x0:number, x1:number, num_segmentos:number, opcion:number):number{
+    if(opcion==1){
+      let x = simpsonRule.x(x0, x1, num_segmentos);
+      let fx = simpsonRule.fx1(x);
+      let result = simpsonRule.simpson(x, fx);
+      return result;
+    }else if(opcion==2){
+      let x = simpsonRule.x(x0, x1, num_segmentos);
+      let fx = simpsonRule.fx2(x);
+      let result = simpsonRule.simpson(x, fx);
+      return result;
+    }else if (opcion==3){      
+      let x = simpsonRule.x(x0, x1, num_segmentos);
+      let fx = simpsonRule.fx3(x);
+      let result = simpsonRule.simpson(x, fx);
+      return result;
+    }
+    else{
+      return 0
+    }
+
+
   }
 }
