@@ -50,5 +50,4 @@ describe('SimpsonComponent', () => {
   it('Should return p=0.49500 if x0=0, x1=2.75, num_seg=10, ERROR=0.0001 and t', () => {
     expect(component.t(0,2.75,10,30)).toBeCloseTo(0.49500);
   });
-
 });

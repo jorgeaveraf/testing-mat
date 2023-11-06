@@ -46,7 +46,6 @@ export class simpsonRule{
         return fx;
     }
 
-
     static simpson(x: number[], fx: number[]){
         let sum = 0;
         let w3 = (x[1] - x[0]) / 3;
@@ -72,8 +71,6 @@ export class simpsonRule{
         }
       }
     
-    
-
     static round(value: number): number {
         return Math.round(value * 1000) / 1000; 
       }
