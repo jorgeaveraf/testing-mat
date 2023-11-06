@@ -30,4 +30,25 @@ describe('SimpsonComponent', () => {
     expect(component.calcular(1,4,6,3)).toBeGreaterThan(1.379);
     expect(component.calcular(1,4,6,3)).toBeLessThan(1.389);
   });
+
+  it('Should return 16.0 if x=5', () => {
+    expect(component.gamma(5)).toBeCloseTo(24.0);
+  });
+
+  it('Should return 11.63.0 if x=9/2', () => {
+    expect(component.gamma(9/2)).toBeCloseTo(11.63);
+  });
+
+  it('Should return p=0.35006 if x0=0, x1=1.1, num_seg=10, ERROR=0.0001 and t', () => {
+    expect(component.t(0,1.1,10,9)).toBeCloseTo(0.35006);
+  });
+
+  it('Should return p=0.36757 if x0=0, x1=1.1812, num_seg=10, ERROR=0.0001 and t', () => {
+    expect(component.t(0,1.1812,10,10)).toBeCloseTo(0.36757);
+  });
+
+  it('Should return p=0.49500 if x0=0, x1=2.75, num_seg=10, ERROR=0.0001 and t', () => {
+    expect(component.t(0,2.75,10,30)).toBeCloseTo(0.49500);
+  });
+
 });

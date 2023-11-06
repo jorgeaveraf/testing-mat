@@ -39,7 +39,16 @@ export class SimpsonComponent {
     else{
       return 0
     }
+  }
 
+  t(x0:number, x1:number, num_segmentos:number, dof:number):number{
+    let x = simpsonRule.x(x0, x1, num_segmentos);
+    let fx = simpsonRule.fx4(x,dof)
+    return simpsonRule.simpson(x,fx)
+  }
 
+  gamma(x:number):number{
+    let result = simpsonRule.gamma(x);
+    return result
   }
 }
