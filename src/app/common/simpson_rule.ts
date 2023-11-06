@@ -1,10 +1,3 @@
-/*Some functions in simpson:
-simpson()
-2x()
-x2()
-1_x()
-t()
-*/
 export class simpsonRule{
     static x(x0: number, x1:number, num_segment:number) {
         let w = (x1 - x0) / num_segment;
@@ -42,6 +35,16 @@ export class simpsonRule{
         return fx;
     }
 
+    static fx4(x: number[], dof: number){
+        let fx = [];
+        let n=(dof+1)/2*-1
+        let res
+        for (let i = 0; i < x.length; i++) {
+            res=(this.gamma((dof+1)/2)/(Math.pow(dof*Math.PI,0.5)*(this.gamma(dof/2))))*Math.pow(1+Math.pow(x[i],2)/dof,n)
+            fx.push(this.round(res));
+        }
+        return fx;
+    }
 
     static simpson(x: number[], fx: number[]){
         let sum = 0;
@@ -58,6 +61,16 @@ export class simpsonRule{
         return sum ;
     }
 
+    static gamma(x: number): number {
+        if (x == 1) {
+          return 1;
+        } else if (x == 0.5) {
+          return Math.sqrt(Math.PI);
+        } else {
+          return (x - 1) * this.gamma(x - 1);
+        }
+      }
+    
     static round(value: number): number {
         return Math.round(value * 1000) / 1000; 
       }
