@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { simpsonRule } from '../common/simpson_rule';
 import { SimpsonComponent } from './simpson.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 describe('SimpsonComponent', () => {
   let simpson: simpsonRule;
@@ -11,7 +13,7 @@ describe('SimpsonComponent', () => {
     TestBed.configureTestingModule({
       providers: [],
       declarations: [SimpsonComponent],
-      imports: []
+      imports: [RouterModule, FormsModule]
     });
     fixture = TestBed.createComponent(SimpsonComponent);
     component = fixture.componentInstance;

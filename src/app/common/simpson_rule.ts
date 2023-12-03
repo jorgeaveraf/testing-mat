@@ -1,3 +1,15 @@
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [
+    // ... your components here
+  ],
+  imports: [
+    // ... other modules here
+    FormsModule,
+  ],
+})
 export class simpsonRule{
     static x(x0: number, x1:number, num_segment:number) {
         let w = (x1 - x0) / num_segment;

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Inject, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-media',
   templateUrl: './media.component.html',
   styleUrls: ['./media.component.css']
 })
+@Injectable({providedIn: 'root'})
 export class MediaComponent {
   arr = [160, 591, 114, 229, 230, 270, 128, 1657, 624, 1503];
   arr2 = [15, 69.9, 6.5, 22.4, 28.4, 65.9, 19.4, 198.7, 38.8, 138.2];
