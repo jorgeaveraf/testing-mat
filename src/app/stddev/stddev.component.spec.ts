@@ -3,6 +3,8 @@ import { StddevComponent } from './stddev.component';
 import { MediasService } from '../services/media.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MediaComponent } from '../media/media.component';
+import { RouterModule } from '@angular/router';
+
 
 describe('StddevComponent', () => {
   let component: StddevComponent;
@@ -13,7 +15,7 @@ describe('StddevComponent', () => {
     TestBed.configureTestingModule({
       providers: [MediasService, MediaComponent],
       declarations: [StddevComponent],
-      imports: [HttpClientModule]
+      imports: [HttpClientModule, RouterModule]
     });
     service = TestBed.inject(MediasService);
     fixture = TestBed.createComponent(StddevComponent);

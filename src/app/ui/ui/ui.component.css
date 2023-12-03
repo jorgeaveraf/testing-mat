@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #253439FF;
+    height: 150vh;
+  }
+  
+  .header {
+    font-family: 'Hammersmith One';
+    text-align: center;
+    font-size: 100px;
+    padding: 50px;
+    background-color: #253439FF;
+    color: white;
+  }
+  
+  .subheader {
+    text-align: center;
+    font-style: italic;
+    font-size: 65px;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .option {
+    text-align: center;
+    font-style: italic;
+    font-size: 35px;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+  }
+  
+  .button {
+    font-size: 30px;
+    padding: 10px 50px;
+    border: 2px solid #333;
+    border-radius: 25px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #86ADA0;
+    color: white;
+  }
+  
